@@ -1,6 +1,7 @@
     #ler entradas do usuarios
 cont = 0#variavel controla a repeticao
-escolha_usuario= int (input())#variavel que guarda quantas vezes o codigo vai rodar
+alunos = []
+escolha_usuario= int(input("degite a quantidade de alunos que voce deseja cadastra:"))#variavel que guarda quantas vezes o codigo vai rodar
 while cont < escolha_usuario:
 
     nome = input()#armazenar o nome do aluno
@@ -9,9 +10,10 @@ while cont < escolha_usuario:
     nota3 = float(input())
     nota4 = float(input())
 
-    faltas = int(input())#calculo da media
+    faltas = int(input(f"degite a quantidade de faltas o {nome} tem:"))#calculo da media
+    #calculo de
     media = (nota1+nota2+nota3+nota4)/4
-
+    print(media)
     #logica da situação
     if faltas >31:
         situacao = "reprovado por falta"
@@ -25,12 +27,11 @@ while cont < escolha_usuario:
             situacao = "reprovado na recuperação"
     else:
         situacao = "reprovado por media"
+    #enviar os dados do aluno para a lista (alunos)  
+    alunos.append([nome, faltas, media, situacao])
+    cont =+ 1
+#relatorio
+print(alunos)
 
-        #relatorio
-    print("nome",nome)
-    print("notas:",nota1,nota2,nota3,nota4)
-    print("nome",faltas)
-    print("nome",situacao)
-cont = cont +1
-
+        
 
