@@ -1,6 +1,11 @@
 #cadastro de usuario e senha
 saldo = 0.0 #varialvel que guarda o saldo do usuario
+#declara funçao
+def validar_senha(senha_validar): 
+    if senha-validar_senha == senha: 
 #menu principal 
+     return True # retorna verdadeiro
+    saldo =0.0
 while True:
     print("bem vindoo!\n digite 1.deposito 2. sacar 3.pix 4.extrato 5.encerrar!")
     #ler a escolha do usuario 
